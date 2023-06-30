@@ -1,0 +1,8 @@
+V_GEST:move_mouse
+FIST:handle_drag
+INDEX:handle_left_click
+PINKY:handle_right_click
+PALM:handle_double_click
+PINCH_MINOR:handle_scroll
+PINCH_MAJOR:handle_system_volume
+

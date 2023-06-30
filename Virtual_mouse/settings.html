@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+     <style>
+    body{
+    background-image: url("ai.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    </style>
+</head>
+<body>
+    <h1>Settings</h1>
+    <button onclick="window.history.back();">Back</button>
+
+    <form action="/update_gesture_mappings" method="post">
+        <label for="action1">Move mouse:</label>
+        <select name="move_mouse" id="action1">
+            <option value="V_GEST">V_GEST</option>
+        </select>
+
+        <label for="action2">Left Click:</label>
+        <select name="handle_left_click" id="action2">
+            <option value="INDEX">INDEX</option>
+        </select>
+
+        <label for="action3">Right Click:</label>
+        <select name="handle_right_click" id="action3">
+            <option value="PINKY">PINKY</option>
+        </select>
+
+        <label for="action4">Drag:</label>
+        <select name="handle_drag" id="action4">
+            <option value="FIST">FIST</option>
+        </select>
+
+        <label for="action5">Double Click:</label>
+        <select name="handle_double_click" id="action5">
+            <option value="PALM">PALM</option>
+        </select>
+
+        <input type="submit" value="Save">
+    </form>
+
+    <br>
+    <a href="/">Back to Homepage</a>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Mouse</title>
+
+</head>
+<body>
+    <button onclick="window.history.back();">Back</button>
+    <img alt="Live Video Stream" src="{{ url_for('video_feed') }}">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        const startButton = document.getElementById("start");
+        const stopButton = document.getElementById("stop");
+
+        startButton.addEventListener("click", () => {
+            // Send a request to the server to start gesture detection
+            fetch("/start_gesture_detection");
+        });
+
+        stopButton.addEventListener("click", () => {
+            // Send a request to the server to stop gesture detection
+            fetch("/stop_gesture_detection");
+        });
+    </script>
+</body>
+</html>
